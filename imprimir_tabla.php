@@ -1,0 +1,36 @@
+<?php
+$f=  date("d/m/Y-his");
+echo "<td style=mso-number-format:mm/dd/yy></td>";
+echo "<table align=center border=1> ";
+echo "<tr> ";
+echo "<th></th> ";
+echo "<th></th> ";
+echo "</tr> ";
+echo "<tr> ";
+echo "<td colspan=11 align=center><font color=blue>MINISTERIO DE OBRAS PUBLICAS SERVICIOS Y VIVIENDA</font></td> ";
+echo "<td></td> ";
+echo "</tr> ";
+echo "<tr> ";
+echo "<td colspan=11 align=center><font color=blue>SISTEMA ARCHIVERO DIGITAL</font></td> ";
+echo "</tr> ";
+echo "</table> ";
+header("Content-type: application/vnd.ms-excel; name='excel'");
+header("Content-Disposition: filename=ficheroExcel123.xls");
+header("Pragma: no-cache");
+header("Expires: 0");
+echo $_POST['datos_a_enviar'];
+echo "<table border=1 align=center> ";
+echo "<tr> ";
+echo "<th><Nombre</th> ";
+echo "<th>Fecha</th>";
+echo "</tr>";
+echo "<tr> ";
+echo "<td><font color=green> Nombre:</font></td> ";
+echo "<td>Cargo: </td> ";
+echo "</tr> ";
+echo "<tr> ";
+echo "<td><font color=blue>--<?php echo ('unidadEjecutora');?>---</font></td> ";
+echo "<td>-------</td> ";
+echo "</tr> ";
+echo "</table> ";
+?>
